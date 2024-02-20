@@ -17,14 +17,15 @@ source=("$_name-$pkgver.tar.gz::https://github.com/jgm/${_name}/archive/refs/tag
 sha256sums=('082ae6d88e1df6c0a7c0d60a35d0f63453e41c7e71586a8e86dc3924a6f4cef6')
 
 build() {
-  cd "$srcdir/$_pkgname-$pkgver"
+  cd "$srcdir/$_name-$pkgver"
 
-  stack build 
+  stack build pandoc-cli:exe:pandoc
 }
 
 check() {
-  cd $pkgname-$pkgver
-  runhaskell Setup test --show-details=direct
+  cd "$srcdir/$_name-$pkgver"
+
+  stack test pandoc-cli:exe:pandoc
 }
 
 package() {
