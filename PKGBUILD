@@ -29,12 +29,12 @@ check() {
 }
 
 package() {
-  cd $pkgname-$pkgver
-  runhaskell Setup copy --destdir="$pkgdir"
+  cd "$srcdir/$_name-$pkgver"
+  mkdir -m755 -p "${pkgdir}/usr/bin/"
+  install -m755 "$(stack path --local-install-root)/bin/pandoc" "${pkgdir}/usr/bin/pandoc"
   install -D -m644 COPYING.md -t "$pkgdir"/usr/share/licenses/$pkgname/
-  rm -f "$pkgdir"/usr/share/doc/$pkgname/COPYING.md
 
-  LD_LIBRARY_PATH="$PWD/dist/build" dist/build/pandoc/pandoc --bash-completion > pandoc-completion.bash
+  "${pkgdir}/usr/bin/pandoc" --bash-completion > pandoc-completion.bash
   install -Dm644 pandoc-completion.bash "$pkgdir"/usr/share/bash-completion/completions/pandoc
 }
 
