@@ -13,8 +13,8 @@ conflicts=('pandoc' 'pandoc-cli')
 replaces=('pandoc' 'pandoc-cli')
 depends=()
 makedepends=('stack')
-source=("$_name-$pkgver.tar.gz::https://github.com/jgm/${_name}/archive/refs/tags/${_pkgver}.tar.gz")
-sha256sums=('082ae6d88e1df6c0a7c0d60a35d0f63453e41c7e71586a8e86dc3924a6f4cef6')
+source=("${_name}-${pkgver}.tar.gz::https://github.com/jgm/${_name}/archive/refs/tags/${pkgver}.tar.gz")
+sha256sums=('2df4b708480486ade33e29aa4ea99be7bb23198596d96ececc2867c7e50e1ba7')
 
 build() {
   cd "$srcdir/$_name-$pkgver"
