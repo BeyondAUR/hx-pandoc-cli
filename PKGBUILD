@@ -14,7 +14,7 @@ replaces=('pandoc' 'pandoc-cli')
 depends=()
 makedepends=('stack')
 source=("${_name}-${pkgver}.tar.gz::https://github.com/jgm/${_name}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('2df4b708480486ade33e29aa4ea99be7bb23198596d96ececc2867c7e50e1ba7')
+sha256sums=('999b119171b92a5f6697d2dec89df49b629506d0f34976a94fdf35e9ae4c5d0d')
 
 build() {
   cd "$srcdir/$_name-$pkgver"
