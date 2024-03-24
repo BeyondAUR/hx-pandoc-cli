@@ -2,7 +2,7 @@
 
 _name=pandoc
 pkgname=hx-pandoc-cli
-pkgver=3.1.12.1
+pkgver=3.1.12.3
 pkgrel=1
 pkgdesc="Conversion between documentation formats"
 url="https://pandoc.org"
