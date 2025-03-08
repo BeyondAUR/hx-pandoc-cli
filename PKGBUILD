@@ -2,7 +2,7 @@
 
 _name=pandoc
 pkgname=hx-pandoc-cli
-pkgver=3.6.2
+pkgver=3.6.3
 pkgrel=1
 pkgdesc="Conversion between documentation formats"
 url="https://pandoc.org"
@@ -14,7 +14,7 @@ replaces=('pandoc' 'pandoc-cli')
 depends=()
 makedepends=('stack')
 source=("${_name}-${pkgver}.tar.gz::https://github.com/jgm/${_name}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('068a0fd99dcd34e99aec0cd039d8d7cdb6b16bf20e338549cc562717c8bcb21f')
+sha256sums=('5e5d78b79f86454cb542246d318682f26e0959e8f1aa068b3645832f8d5ed170')
 
 _stack_resolver=lts-23.0
 
